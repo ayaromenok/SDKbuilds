@@ -4,7 +4,7 @@ repository for some Vulkan/Qt 5.10 tests
 # Table of Contents
 1. [Build](#build)
 	1. [Qt for Android](#qt-for-android)
-2. [Qt Vulkan example](#qt-vulkan-exmaples) 
+2. [Qt Vulkan examples](#qt-vulkan-exmaples) 
 
 ## Build
 **Qt 5.10 required**
