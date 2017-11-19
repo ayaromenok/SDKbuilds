@@ -1,5 +1,10 @@
 # vkQt
-repositorey for some Vulkan/Qt 5.10 tests
+repository for some Vulkan/Qt 5.10 tests
+
+# Table of Contents
+1. [Build](#build)
+1.1. [Qt for Android](#qt_for_android)
+2. [Qt Vulkan example] (#qt_vulkan_exmaples) 
 
 ## Build
 **Qt 5.10 required**
@@ -14,5 +19,5 @@ so, build parameters for qt is following: -xplatform android-g++ -android-ndk-pl
 
 `./configure  -prefix /path/where/to/install -android-arch armeabi-v7a -xplatform android-g++ -android-ndk-platform android-24 -opengl es2 --disable-rpath -nomake tests -nomake examples -android-ndk /path/to/your/android/ndk10 -android-sdk /path/to/your/android/sdk -android-ndk-host linux-x86_64 -android-toolchain-version 4.9 -skip qttranslations -skip qtwebengine -skip qtserialport -no-warnings-are-errors -opensource -confirm-license`
 
-###Qt Vulkan examples
+## Qt Vulkan examples
 Nice Vulkan examples you can find in `qt/qtbase/examples/vulkan` - works perfect on Desktop, while have some UI-related issues on Android (due to usage of widgets)
