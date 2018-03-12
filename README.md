@@ -1,5 +1,5 @@
 # vkQt
-repository for some Vulkan/Qt 5.10 tests
+repository twith tips to build Vulkan support in Qt 5.10+ (defauld builds from QtSDK/qt.io don't include Vulkan support)
 
 # Table of Contents
 1. [Build](#build)
