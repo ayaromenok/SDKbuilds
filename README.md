@@ -23,21 +23,21 @@ repository with tips to build Vulkan support in Qt 5.10+ (defauld builds from Qt
 - 5.0 (NDK 16)
 Qt 5.10 can be build with CLang 5.0 from NDK 16(early version not tested). While Qt 5.7+ itself required C++11, some of example can be compiled only with C++14 option
 
-##### 32bit
+##### 32bit-clang
 
 `./configure  -prefix /path/where/to/install/qt_arm32_clang -c++std c++14 -release -opensource -confirm-license -xplatform android-clang -nomake tests -nomake examples -android-ndk /home/az/sdk/android/ndk -android-sdk /home/az/sdk/android/sdk -android-ndk-host linux-x86_64  -android-ndk-platform android-21 -android-arch armeabi-v7a -skip qttranslations -skip qtserialport -no-warnings-are-errors -v`
 
-##### 64bit
+##### 64bit-clang
 
 `./configure  -prefix /path/where/to/install/qt_arm64_clang -c++std c++14 -release -opensource -confirm-license  -xplatform android-clang -nomake tests -nomake examples -android-ndk /home/az/sdk/android/ndk -android-sdk /home/az/sdk/android/sdk -android-ndk-host linux-x86_64  -android-ndk-platform android-21 -android-arch arm64-v8a -skip qttranslations -skip qtserialport -no-warnings-are-errors -v`
 
-##### QtCreator
+##### QtCreator-clang
 due to issues with current version of QtCreator\clang compiler for Android it's necessary to select a gcc as a build comliper for clang build'
  
 #### gcc 
 - 4.9(NDK 10)
 
-##### 32bit
+##### 32bit-gcc
 To build Qt 5.10+ with vulkan support([added by Laszlo Agocs from KDab](http://blog.qt.io/blog/2017/06/06/vulkan-support-qt-5-10-part-1/)) on Android at present moment(due to bugs in Android NDK) to use NDK10;
 Since Vulkan support exist starting from Android-24, you need to copy platform files from latest NDK(15 in time of writing this) to NDK10 and build Qt
 (i.e. copy NDK15\platforms\android-24 to NDK10\platforms\);
@@ -45,7 +45,7 @@ so, build parameters for qt is following: -xplatform android-g++ -android-ndk-pl
 
 `./configure  -prefix /path/where/to/install/qt -android-arch armeabi-v7a -xplatform android-g++ -android-ndk-platform android-24 -opengl es2 --disable-rpath -nomake tests -nomake examples -android-ndk /path/to/your/android/ndk10 -android-sdk /path/to/your/android/sdk -android-ndk-host linux-x86_64 -android-toolchain-version 4.9 -skip qttranslations -skip qtwebengine -skip qtserialport -no-warnings-are-errors -opensource -confirm-license`
 
-##### 64bit
+##### 64bit-gcc
 - can't be compiled due to errors
 
 ## Qt Vulkan examples
