@@ -4,7 +4,7 @@ repository with tips to build Vulkan support in Qt 5.10+ (defauld builds from Qt
 # Table of Contents
 1. [Build](#build)
 	1. [Qt for Android](#qt-for-android)
-		1. [clang](#clang)
+		1. [clang - simple way](#clang)
 			1. [32bit](#32bit-clang)
 			2. [64bit](#64bit-clang)
 			3. [QtCreator](#qtcreator-clang)
@@ -21,7 +21,7 @@ repository with tips to build Vulkan support in Qt 5.10+ (defauld builds from Qt
 
 #### clang 
 - 5.0 (NDK 16)
-Qt 5.10 can be build with CLang 5.0 from NDK 16(early version not tested). While Qt 5.7+ itself required C++11, some of example can be compiled only with C++14 option
+Qt 5.10 can be build with CLang 5.0+ from NDK 16+. While Qt 5.7+ itself required C++11, some of example can be compiled only with C++14 option
 
 ##### 32bit-clang
 
