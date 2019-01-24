@@ -6,11 +6,13 @@ mkdir src
 cd ~/sdk/src
 git clone https://github.com/ayaromenok/opencv.git
 git clone https://github.com/opencv/opencv_extra.git &
+cd opencv
+git checkout OpenCL_OutOfRes_ArmMali
+cd ..
 mkdir build
 cd build
 mkdir opencv
 cd opencv
-git checkout OpenCL_OutOfRes_ArmMali
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D BUILD_TESTS=OFF \
