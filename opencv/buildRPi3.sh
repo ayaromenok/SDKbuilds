@@ -1,14 +1,12 @@
-#default system from friendlyarm required installation of cmake
-sudo apt install cmake
+#!/bin/sh
+echo "setup OpenCV on RPi3"
+sudo apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libx264-dev
 mkdir ~/sdk
 cd ~/sdk
 mkdir src
 cd ~/sdk/src
 git clone https://github.com/ayaromenok/opencv.git
-git clone https://github.com/opencv/opencv_extra.git &
-cd opencv
-git checkout OpenCL_OutOfRes_ArmMali
-cd ..
+#git clone https://github.com/opencv/opencv_extra.git &
 mkdir build
 cd build
 mkdir opencv
@@ -18,11 +16,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_TESTS=OFF \
 	-D BUILD_EXAMPLES=OFF \
 	-D INSTALL_C_EXAMPLES=OFF \
-	-D WITH_OPENCL=ON \
+	-D WITH_OPENCL=OFF \
+	-D ENABLE_NEON=ON \
+	-D ENABLE_VFPV3=ON \
 	../../opencv
-make -j 2
-sudo make -j 6 install
+make
+sudo make -j 1 install
 #	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
-
-#for opencv_perf_
 #
