@@ -7,14 +7,12 @@ echo "setup basic libs"
 sudo apt-get install build-essential libfontconfig1-dev libdbus-1-dev \
 libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev \
 libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev cmake \
-mc libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
-libx264-dev
+libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
+libx264-dev mc cmake
 
 echo "setup gstreamer"
 sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
-gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly \
-gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev \
-gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-als
+gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-tools
 
 echo "make BCM sym-links"
 sudo ln -s /usr/lib/libbrcmEGL.so /usr/lib/libEGL.so
@@ -32,6 +30,9 @@ sudo ln -s /opt/vc/include/WF /usr/include/WF
 sudo ln -s /opt/vc/include/interface /usr/include/interface
 sudo ln -s /opt/vc/include/vcinclude /usr/include/vcinclude
 sudo ln -s /opt/vc/include/bcm_host.h /usr/include/bcm_host.h
+
+echo "bcm2835-v4l2" | sudo tee /etc/modules
+sudo modprobe bcm2835-v4l2
 
 echo "RPi3 system is OK"
 
