@@ -15,10 +15,11 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-tools
 
 echo ">>>> make BCM sym-links"
-sudo ln -s /usr/lib/libbrcmEGL.so /usr/lib/libEGL.so
-sudo ln -s /usr/lib/libbrcmGLESv2.so /usr/lib/libGLESv2.so
-sudo ln -s /usr/lib/libbrcmOpenVG.so /usr/lib/libOpenVG.so
-sudo ln -s /usr/lib/libbrcmWFC.so /usr/lib/libWFC.so
+sudo ln -s /opt/vc/lib/libbrcmEGL.so /usr/lib/libEGL.so
+sudo ln -s /opt/vc/lib/libbrcmGLESv2.so /usr/lib/libGLESv2.so
+sudo ln -s /opt/vc/lib/libbrcmOpenVG.so /usr/lib/libOpenVG.so
+sudo ln -s /opt/vc/lib/libbrcmWFC.so /usr/lib/libWFC.so
+sudo ln -s /opt/vc/lib/libopenmaxil.so /usr/lib/libopenmaxil.so
 
 sudo ln -s /opt/vc/include/EGL /usr/include/EGL
 sudo ln -s /opt/vc/include/GLES /usr/include/GLES
