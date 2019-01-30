@@ -1,6 +1,8 @@
-echo ">>>> setup qt5"
+echo ">>>> Setup Qt5 base"
 
-# ../hardware/rpi3.sh
+../hardware/rpi3.sh
+
+echo ">>>> get Qt5 base"
 mkdir ~/sdk
 cd ~/sdk
 mkdir src
@@ -17,7 +19,7 @@ cd build
 mkdir qt
 cd qt
 
-echo ">>>> configure Qt5"
+echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 ../../src/qt/qtbase-everywhere-src-5.12.0/configure \
 -v \
@@ -46,15 +48,6 @@ QMAKE_LIBDIR_OPENVG=/opt/vc/lib QMAKE_INCDIR_OPENVG="/opt/vc/include /opt/vc/inc
 
 echo ">>>> RPi EGLFS status:"
 less config.summary | grep Raspberry
-#-skip qtlocation \
-#-no-feature-geoservices_mapboxgl \
-#-skip qtwayland \
-#-skip qtwebengine \
-#-skip qtlocation \
-#-skip qtwebchannel \
-#-skip qtwebglplugin \
-#-skip qtwebsockets \
-#-skip qtwebview \
-#-skip qtcanvas3d \
-#-skip qtdatavis3d \
-#-skip qtvirtualkeyboard \
+	
+echo "It's time for: make & make install & ldconfig"	
+
