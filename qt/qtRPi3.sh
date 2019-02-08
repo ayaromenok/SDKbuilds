@@ -1,6 +1,6 @@
 echo ">>>> Setup Qt5 base"
 
-../hardware/rpi3.sh
+../hardware/sysRPi3.sh
 
 echo ">>>> get Qt5 base"
 mkdir ~/sdk
