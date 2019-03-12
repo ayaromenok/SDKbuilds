@@ -1,4 +1,6 @@
 #default system from friendlyarm required installation of cmake
+# gtk required if Qt not used. gstreamer - to use camera on Rk3999
+#sudo apt install libgtk2.0-dev pkg-config gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer1.0-dev
 sudo apt install cmake
 mkdir ~/sdk
 cd ~/sdk
