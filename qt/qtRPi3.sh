@@ -10,8 +10,8 @@ cd src
 mkdir qt
 cd qt
 
-wget http://download.qt.io/official_releases/qt/5.12/5.12.1/submodules/qtbase-everywhere-src-5.12.1.tar.xz
-tar xf qtbase-everywhere-src-5.12.1.tar.xz
+wget http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtbase-everywhere-src-5.12.0.tar.xz
+tar xf qtbase-everywhere-src-5.12.0.tar.xz
 
 cd ../..
 mkdir build
@@ -21,7 +21,7 @@ cd qt
 
 echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
-../../src/qt/qtbase-everywhere-src-5.12.1/configure \
+../../src/qt/qtbase-everywhere-src-5.12.0/configure \
 -v \
 -opengl es2 -eglfs \
 -no-gtk \
