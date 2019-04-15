@@ -38,12 +38,22 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -glib \
 -prefix /usr/local \
 -qpa eglfs \
+
 QMAKE_CFLAGS="-march=armv8-a -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8" \
 QMAKE_CXXFLAGS="-march=armv8-a -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8" \
-QMAKE_LIBS_EGL="-lEGL -lGLESv2" QMAKE_LIBS_OPENVG="-lEGL -lOpenVG -lGLESv2" \
-QMAKE_LIBDIR_OPENGL_ES2=/opt/vc/lib QMAKE_INCDIR_OPENGL_ES2="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
-QMAKE_LIBDIR_EGL=/opt/vc/lib QMAKE_INCDIR_EGL="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
-QMAKE_LIBDIR_OPENVG=/opt/vc/lib QMAKE_INCDIR_OPENVG="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
+
+QMAKE_LIBDIR_OPENGL_ES2="/opt/vc/lib" \
+QMAKE_INCDIR_OPENGL_ES2="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
+QMAKE_LIBS_OPENGL_ES2="-lGLESv2"
+
+QMAKE_INCDIR_EGL="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
+QMAKE_LIBDIR_EGL="/opt/vc/lib" \
+QMAKE_LIBS_EGL="-lEGL -lGLESv2" \
+
+QMAKE_INCDIR_OPENVG="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /opt/vc/include/interface/vmcs_host/linux" \
+QMAKE_LIBDIR_OPENVG="/opt/vc/lib" \
+QMAKE_LIBS_OPENVG="-lEGL -lOpenVG -lGLESv2" \
+
 -DEGLFS_DEVICE_INTEGRATION=eglfs_brcma
 
 echo ">>>> RPi EGLFS status:"
