@@ -54,7 +54,7 @@ QMAKE_INCDIR_OPENVG="/opt/vc/include /opt/vc/include/interface/vcos/pthreads /op
 QMAKE_LIBDIR_OPENVG="/opt/vc/lib" \
 QMAKE_LIBS_OPENVG="-lEGL -lOpenVG -lGLESv2" \
 
--DEGLFS_DEVICE_INTEGRATION=eglfs_brcma
+EGLFS_DEVICE_INTEGRATION=eglfs_brcma
 
 echo ">>>> RPi EGLFS status:"
 less config.summary | grep Raspberry
