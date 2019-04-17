@@ -19,6 +19,7 @@ sudo ln -s /opt/vc/lib/libbrcmGLESv2.so /usr/lib/libGLESv2.so
 sudo ln -s /opt/vc/lib/libbrcmOpenVG.so /usr/lib/libOpenVG.so
 sudo ln -s /opt/vc/lib/libbrcmWFC.so /usr/lib/libWFC.so
 sudo ln -s /opt/vc/lib/libopenmaxil.so /usr/lib/libopenmaxil.so
+sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/libbcm_host.so
 
 sudo ln -s /opt/vc/include/EGL /usr/include/EGL
 sudo ln -s /opt/vc/include/GLES /usr/include/GLES
