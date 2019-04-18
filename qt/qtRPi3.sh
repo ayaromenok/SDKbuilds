@@ -1,6 +1,6 @@
 echo ">>>> Setup Qt5 base"
 
-../hardware/sysRPi3.sh
+#../hardware/sysRPi3.sh
 
 echo ">>>> get Qt5 base"
 mkdir ~/sdk
@@ -10,8 +10,8 @@ cd src
 mkdir qt
 cd qt
 
-wget http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtbase-everywhere-src-5.12.0.tar.xz
-tar xf qtbase-everywhere-src-5.12.0.tar.xz
+#wget http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtbase-everywhere-src-5.12.0.tar.xz
+#tar xf qtbase-everywhere-src-5.12.0.tar.xz
 
 cd ../..
 mkdir build

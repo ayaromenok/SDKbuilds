@@ -9,9 +9,9 @@ mkdir src
 cd src
 mkdir opencv
 cd opencv
-#git clone https://github.com/opencv/opencv.git
-#git clone https://github.com/opencv/opencv_contrib.git
-#git clone https://github.com/opencv/opencv_extra.git
+git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
+git clone https://github.com/opencv/opencv_extra.git
 
 cd ../..
 mkdir build
@@ -22,8 +22,8 @@ cd opencv
 echo ">>>> Configure OpenCV"
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
-	-D BUILD_TESTS=OFF \
-	-D BUILD_PERF_TEST=OFF \
+	-D BUILD_TESTS=ON \
+	-D BUILD_PERF_TESTS=ON \
 	-D BUILD_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=ON \
 	-D WITH_OPENCL=OFF \
@@ -35,7 +35,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	../../src/opencv/opencv
 	
 echo ">>>> It's time for: make & make install & ldconfig"	
-#make
-#sudo make -j 1 install
+make -j 2
+sudo make -j 4 install
 #
 #
