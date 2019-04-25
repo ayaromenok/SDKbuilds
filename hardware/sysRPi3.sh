@@ -14,23 +14,23 @@ echo ">>>> Setup gstreamer"
 #./sysRPi3GStreamer.sh
 
 echo ">>>> Make BRCM sym-links"
-sudo ln -s /opt/vc/lib/libbrcmEGL.so /usr/local/lib/libEGL.so
-sudo ln -s /opt/vc/lib/libbrcmGLESv2.so /usr/local/lib/libGLESv2.so
-sudo ln -s /opt/vc/lib/libbrcmOpenVG.so /usr/local/lib/libOpenVG.so
-sudo ln -s /opt/vc/lib/libbrcmWFC.so /usr/local/lib/libWFC.so
-sudo ln -s /opt/vc/lib/libopenmaxil.so /usr/local/lib/libopenmaxil.so
-sudo ln -s /opt/vc/lib/libbcm_host.so /usr/local/lib/libbcm_host.so
+#sudo ln -s /opt/vc/lib/libbrcmEGL.so /usr/local/lib/libEGL.so
+#sudo ln -s /opt/vc/lib/libbrcmGLESv2.so /usr/local/lib/libGLESv2.so
+#sudo ln -s /opt/vc/lib/libbrcmOpenVG.so /usr/local/lib/libOpenVG.so
+#sudo ln -s /opt/vc/lib/libbrcmWFC.so /usr/local/lib/libWFC.so
+#sudo ln -s /opt/vc/lib/libopenmaxil.so /usr/local/lib/libopenmaxil.so
+#sudo ln -s /opt/vc/lib/libbcm_host.so /usr/local/lib/libbcm_host.so
 
-sudo ln -s /opt/vc/include/EGL /usr/local/include/EGL
-sudo ln -s /opt/vc/include/GLES /usr/local/include/GLES
-sudo ln -s /opt/vc/include/GLES2 /usr/local/include/GLES2
-sudo ln -s /opt/vc/include/KHR /usr/local/include/KHR
-sudo ln -s /opt/vc/include/IL /usr/local/include/IL
-sudo ln -s /opt/vc/include/VG /usr/local/include/VG
-sudo ln -s /opt/vc/include/WF /usr/local/include/WF
-sudo ln -s /opt/vc/include/interface /usr/local/include/interface
-sudo ln -s /opt/vc/include/vcinclude /usr/local/include/vcinclude
-sudo ln -s /opt/vc/include/bcm_host.h /usr/local/include/bcm_host.h
+#sudo ln -s /opt/vc/include/EGL /usr/local/include/EGL
+#sudo ln -s /opt/vc/include/GLES /usr/local/include/GLES
+#sudo ln -s /opt/vc/include/GLES2 /usr/local/include/GLES2
+#sudo ln -s /opt/vc/include/KHR /usr/local/include/KHR
+#sudo ln -s /opt/vc/include/IL /usr/local/include/IL
+#sudo ln -s /opt/vc/include/VG /usr/local/include/VG
+#sudo ln -s /opt/vc/include/WF /usr/local/include/WF
+#sudo ln -s /opt/vc/include/interface /usr/local/include/interface
+#sudo ln -s /opt/vc/include/vcinclude /usr/local/include/vcinclude
+#sudo ln -s /opt/vc/include/bcm_host.h /usr/local/include/bcm_host.h
 
 echo "bcm2835-v4l2" | sudo tee /etc/modules
 sudo modprobe bcm2835-v4l2
