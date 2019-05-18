@@ -8,8 +8,8 @@ cd src
 mkdir qt
 cd qt
 
-#wget http://download.qt.io/official_releases/qt/5.12/5.12.1/submodules/qtbase-everywhere-src-5.12.1.tar.xz
-#tar xf qtbase-everywhere-src-5.12.1.tar.xz
+wget http://download.qt.io/official_releases/qt/5.12/5.12.1/submodules/qtbase-everywhere-src-5.12.3.tar.xz
+tar xf qtbase-everywhere-src-5.12.3.tar.xz
 
 cd ../..
 mkdir build
@@ -19,7 +19,7 @@ cd qtDesktopGL
 
 echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/share/pkgconfig \
-../../src/qt/qtbase-everywhere-src-5.12.1/configure \
+../../src/qt/qtbase-everywhere-src-5.12.3/configure \
 -v \
 -opengl desktop \
 -opensource -confirm-license -release \
