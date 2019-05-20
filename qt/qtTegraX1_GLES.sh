@@ -14,13 +14,14 @@ tar xf qtbase-everywhere-src-5.12.3.tar.xz
 cd ../..
 mkdir build
 cd build
-mkdir qtDesktopGL
-cd qtDesktopGL
+mkdir qtGLES
+cd qtGLES
 
 echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/share/pkgconfig \
 ../../src/qt/qtbase-everywhere-src-5.12.3/configure \
--opengl desktop \
+-opengl es2 \
+-opengles3 \
 -opensource -confirm-license -release \
 -force-pkg-config \
 -nomake examples -no-compile-examples \
