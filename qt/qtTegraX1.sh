@@ -8,8 +8,8 @@ cd src
 mkdir qt
 cd qt
 
-wget http://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtbase-everywhere-src-5.12.3.tar.xz
-tar xf qtbase-everywhere-src-5.12.3.tar.xz
+#wget http://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtbase-everywhere-src-5.12.3.tar.xz
+#tar xf qtbase-everywhere-src-5.12.3.tar.xz
 
 cd ../..
 mkdir build
@@ -21,14 +21,14 @@ echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/share/pkgconfig \
 ../../src/qt/qtbase-everywhere-src-5.12.3/configure \
 -v \
--opengl desktop \
+-opengl es2 \
+-opengles3 \
 -opensource -confirm-license -release \
 -force-pkg-config \
 -nomake examples -no-compile-examples \
 -qt-pcre \
--no-pch \
--no-eglfs \
 -prefix /usr/local \
+-eglfs \
 QMAKE_CFLAGS="-march=native -mtune=cortex-a57" \
 QMAKE_CXXFLAGS="-march=native -mtune=cortex-a57"
 
