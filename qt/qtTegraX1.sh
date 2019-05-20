@@ -1,5 +1,5 @@
 echo ">>>> Setup Qt5 base"
-
+../hardware/sysTegraX1.sh
 echo ">>>> get Qt5 base"
 mkdir ~/sdk
 cd ~/sdk
@@ -8,8 +8,8 @@ cd src
 mkdir qt
 cd qt
 
-#wget http://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtbase-everywhere-src-5.12.3.tar.xz
-#tar xf qtbase-everywhere-src-5.12.3.tar.xz
+wget http://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtbase-everywhere-src-5.12.3.tar.xz
+tar xf qtbase-everywhere-src-5.12.3.tar.xz
 
 cd ../..
 mkdir build
