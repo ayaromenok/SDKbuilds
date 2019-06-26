@@ -9,7 +9,7 @@ cd src
 mkdir opencv
 cd opencv
 git clone https://github.com/opencv/opencv.git
-#git clone https://github.com/opencv/opencv_contrib.git
+git clone https://github.com/opencv/opencv_contrib.git
 #git clone https://github.com/opencv/opencv_extra.git
 
 cd ../..
@@ -25,7 +25,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_PERF_TESTS=ON \
 	-D BUILD_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=ON \
-	-D WITH_OPENCL=ONN \
+	-D WITH_OPENCL=ON \
 	-D ENABLE_NEON=ON \
 	-D WITH_QT=ON \
 	-D WITH_OPENGL=OFF \
