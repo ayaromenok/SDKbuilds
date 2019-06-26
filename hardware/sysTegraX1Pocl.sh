@@ -1,4 +1,4 @@
-sudo apt install cmake clang-7 libclang-7-dev
+sudo apt install cmake clang-7 libclang-7-dev libhwloc-dev hwloc
 sudo ln -s /usr/bin/llvm-config-7 /usr/bin/llvm-config
 mkdir ~/sdk
 cd  ~/sdk
