@@ -37,7 +37,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CUDA_FAST_MATH=ON \
 	-D WITH_CABLAS=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
-	-D OPENVC_GENERATE_PKGCONFIG=YES \
+	-D OPENVC_GENERATE_PKGCONFIG=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=../../src/opencv/opencv_contrib/modules \
 	../../src/opencv/opencv
 	
