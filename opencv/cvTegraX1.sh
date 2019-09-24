@@ -9,8 +9,8 @@ cd src
 mkdir opencv
 cd opencv
 git clone https://github.com/opencv/opencv.git
-#git clone https://github.com/opencv/opencv_contrib.git
-#git clone https://github.com/opencv/opencv_extra.git
+git clone https://github.com/opencv/opencv_contrib.git
+git clone https://github.com/opencv/opencv_extra.git
 
 cd ../..
 mkdir build
@@ -33,11 +33,12 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CUDA_FAST_MATH=ON \
 	-D WITH_CABLAS=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
+	-D OPENVC_GENERATE_PKGCONFIG=YES \
 	-D OPENCV_EXTRA_MODULES_PATH=../../src/opencv/opencv_contrib/modules \
 	../../src/opencv/opencv
 	
 echo ">>>> It's time for: make & make install & ldconfig"	
-#make -j 4
-#sudo make -j 4 install
+make -j 4
+sudo make -j 4 install
 #
 #
