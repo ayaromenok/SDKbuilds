@@ -1,4 +1,5 @@
 sudo apt install php-cli php-gd php-xml php-zip inxi
+rm -f *.deb
 wget http://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_9.0.1_all.deb
 sudo dpkg -i phoronix-test-suite_9.0.1_all.deb
 
