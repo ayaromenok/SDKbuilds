@@ -1,8 +1,10 @@
 echo "installing HTOP with CPU Temperature/Frequency"
 mkdir ~/sdk
 cd ~/sdk
-mkdir src/tools
-cd src/tools
+mkdir src
+cd src
+mkdir tools
+cd tools
 git clone https://github.com/wbenny/htop.git
 cd htop
 sudo apt install libncurses5-dev
