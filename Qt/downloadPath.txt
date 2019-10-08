@@ -1,0 +1,7 @@
+# official releases
+# http://download.qt.io/official_releases/qt/5.13/5.13.1/single/qt-everywhere-src-5.13.1.tar.xz
+# http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtbase-everywhere-src-5.13.1.tar.xz
+
+# dev releases
+# http://download.qt.io/development_releases/qt/5.14/5.14.0-alpha/single/qt-everywhere-src-5.14.0-alpha.tar.xz
+# http://download.qt.io/development_releases/qt/5.14/5.14.0-alpha/submodules/qtbase-everywhere-src-5.14.0-alpha.tar.xz

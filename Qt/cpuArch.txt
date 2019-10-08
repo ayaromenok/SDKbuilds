@@ -1,0 +1,6 @@
+ivybridge	# ThinkPad
+bzenv1		# PC
+a17		# ThinkerBoard\Tegra K1
+a53		# RPi3A/B, CM3
+a57		# Tegra X1
+a72		# RPi4/RK3399	
