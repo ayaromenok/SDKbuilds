@@ -1,0 +1,8 @@
+mkdir ~/sdk/tools/tests/glmark2res
+inxi -Fc0
+inxi -Fc0 > ~/sdk/tools/tests/glmark2res/sysInfo.txt
+glmark2 > ~/sdk/tools/tests/glmark2res/gl2.txt
+glmark2 --off-screen> ~/sdk/tools/tests/glmark2res/gl2_offScreen.txt
+glmark2-es2 > ~/sdk/tools/tests/glmark2res/es2.txt
+glmark2-es2 --off-screen > ~/sdk/tools/tests/glmark2res/es2_offScreen.txt
+
