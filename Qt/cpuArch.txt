@@ -1,6 +1,12 @@
-ivybridge	# ThinkPad
-bzenv1		# PC
-a17		# ThinkerBoard\Tegra K1
-a53		# RPi3A/B, CM3
-a57		# Tegra X1
-a72		# RPi4/RK3399	
+#ivybridge	# ThinkPad
+QMAKE_CFLAGS="-march=native -mtune=ivybridge -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=ivybridge -fPIC"
+#bzenv1		# PC
+QMAKE_CFLAGS="-march=native -mtune=bzenv1 -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=bzenv1 -fPIC"
+#a17		# ThinkerBoard\Tegra K1
+QMAKE_CFLAGS="-march=native -mtune=cortex-a17 -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=cortex-a17 -fPIC" -opengl es2
+#a53		# RPi3A/B, CM3
+QMAKE_CFLAGS="-march=native -mtune=cortex-a53 -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=cortex-a53 -fPIC" -opengl es2
+#a57		# Tegra X1
+QMAKE_CFLAGS="-march=native -mtune=cortex-a57 -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=cortex-a57 -fPIC"
+#a72		# RPi4/RK3399	
+QMAKE_CFLAGS="-march=native -mtune=cortex-a72 -fPIC" QMAKE_CXXFLAGS="-march=native -mtune=cortex-a72 -fPIC"
