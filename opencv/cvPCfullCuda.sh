@@ -30,6 +30,10 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_OPENCL=ON \
 	-D WITH_QT=ON \
 	-D WITH_OPENGL=ON \
+	-D WITH_CUDA=ON \
+	-D WITH_CUDNN=ON \
+	-D CUDA_FAST_MATH=ON \
+	-D WITH_CABLAS=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=../../src/opencv/opencv_contrib/modules \
 	../../src/opencv/opencv
