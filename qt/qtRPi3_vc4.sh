@@ -1,14 +1,14 @@
-echo ">>>> Setup Qt5 base"
+echo ">>>> Setup Qt5 all"
 
 #../hardware/sysRPi3.sh
 
-sudo apt-get build-dep qtbase-opensource-src
-sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev
+#sudo apt-get build-dep qtbase-opensource-src qt-opensource-src
+#sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev
 #for multimedia, probably plugins-bad required - need to test
 #sudo apt-get install libasound2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 
 
-echo ">>>> get Qt5 base"
+echo ">>>> get Qt5 all"
 mkdir ~/sdk
 cd ~/sdk
 mkdir src
@@ -16,18 +16,18 @@ cd src
 mkdir qt
 cd qt
 
-#wget http://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtbase-everywhere-src-5.12.3.tar.xz
-#tar xf qtbase-everywhere-src-5.12.3.tar.xz
+#wget http://download.qt.io/official_releases/qt/5.12/5.12.5/single/qt-everywhere-src-5.12.5.tar.xz
+#tar xf qt-everywhere-src-5.12.5.tar.xz
 
 cd ../..
 mkdir build
 cd build
-mkdir qt
-cd qt
+mkdir qt_vc4
+cd qt_vc4
 
-echo ">>>> Configure Qt5 base"
+echo ">>>> Configure Qt5 all"
 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
-../../src/qt/qtbase-everywhere-src-5.12.3/configure \
+../../src/qt/qt-everywhere-src-5.12.5/configure \
 -opengl desktop \
 -no-gtk \
 -opensource -confirm-license -release \
@@ -41,7 +41,22 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -system-freetype \
 -fontconfig \
 -glib \
--prefix /usr/local 
+-skip qtlocation \
+-skip qtwayland \
+-skip qtwebengine \
+-skip qtwebchannel \
+-skip qtwebglplugin \
+-skip qtwebsockets \
+-skip qtwebview \
+-skip qtcanvas3d \
+-skip qtdatavis3d \
+-skip qtvirtualkeyboard \
+-skip qtscript \
+-skip qtcharts \
+-skip qtscxml \
+-skip qttools \
+-skip qtxmlpatterns \
+-prefix /usr/local
 
 QMAKE_CFLAGS="-march=armv8-a -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8" \
 QMAKE_CXXFLAGS="-march=armv8-a -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8" \
