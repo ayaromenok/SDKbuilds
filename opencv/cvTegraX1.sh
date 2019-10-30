@@ -1,8 +1,8 @@
 #!/bin/sh
 echo ">>>> Setup OpenCV on TegraX1"
 
-../hardware/sysTegraX1.sh
-../hardware/sysTegraX1Pocl.sh
+#../hardware/sysTegraX1.sh
+#../hardware/sysTegraX1Pocl.sh
 
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
@@ -11,9 +11,9 @@ mkdir src
 cd src
 mkdir opencv
 cd opencv
-git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
-git clone https://github.com/opencv/opencv_extra.git
+#git clone https://github.com/opencv/opencv.git
+#git clone https://github.com/opencv/opencv_contrib.git
+#git clone https://github.com/opencv/opencv_extra.git
 
 cd ../..
 mkdir build
@@ -32,6 +32,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D ENABLE_NEON=ON \
 	-D WITH_QT=ON \
 	-D WITH_OPENGL=OFF \
+	-D WITH_VULKAN=ON \
 	-D WITH_CUDA=ON \
 	-D WITH_CUDNN=ON \
 	-D CUDA_FAST_MATH=ON \
@@ -42,7 +43,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	../../src/opencv/opencv
 	
 echo ">>>> It's time for: make & make install & ldconfig"	
-make -j 4
+make -j 2
 sudo make -j 4 install
 #
 #
