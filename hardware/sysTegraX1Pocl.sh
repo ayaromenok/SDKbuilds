@@ -7,8 +7,8 @@ cd src
 mkdir pocl
 cd pocl
 
-wget https://github.com/pocl/pocl/archive/v1.4.tar.gz
-tar xf v1.4.tar.gz
+wget https://github.com/pocl/pocl/archive/v1.3.tar.gz
+tar xf v1.3.tar.gz
 
 cd ../..
 mkdir build
@@ -18,4 +18,4 @@ cd pocl
 
 cmake \
 -D ENABLE_CUDA=ON \
-../../src/pocl/pocl-1.4
+../../src/pocl/pocl-1.3
