@@ -6,9 +6,10 @@ cd ~/sdk
 mkdir src
 cd src
 
-git clone https://gitlab.freedesktop.org/anholt/mesa.git
+# #old - git clone https://gitlab.freedesktop.org/anholt/mesa.git
 cd mesa
-git checkout v3d-opt-sub
+# #use master for test
+#git checkout v3d-opt-sub
 #git checkout v3d-cs
 meson build \
 	--prefix=/usr \
