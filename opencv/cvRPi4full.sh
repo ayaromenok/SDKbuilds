@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ">>>> Setup OpenCV on RPi4"
-../hardware/rpi3.sh
+../hardware/sysRPi3.sh
 echo ">>>> Build POCL for Arm-A72"
 ../hardware/sysRPi4Pocl.sh
 

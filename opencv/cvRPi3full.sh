@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ">>>> Setup OpenCV on RPi3"
-../hardware/rpi3.sh
+../hardware/sysRPi3.sh
 
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
