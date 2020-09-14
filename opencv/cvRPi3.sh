@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ">>>> Setup OpenCV on RPi3"
-../hardware/rpi3.sh
+../hardware/sysRPi3.sh
 
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
@@ -9,7 +9,7 @@ mkdir src
 cd src
 mkdir opencv
 cd opencv
-git clone https://github.com/ayaromenok/opencv.git
+git clone https://github.com/opencv/opencv.git
 #git clone https://github.com/opencv/opencv_extra.git &
 cd ../..
 mkdir build
@@ -30,7 +30,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	../../src/opencv/opencv
 	
 echo ">>>> It's time for: make & make install & ldconfig"	
-#make
-#sudo make -j 1 install
+make -j 2
+sudo make -j 1 install
 #	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
 #
