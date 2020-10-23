@@ -1,4 +1,4 @@
-QT6_VER=6.0.0-beta1
+QT6_VER=`cat _version.txt`
 SRC_DIR=~/sdk/src/qt
 BUILD_DIR=~/sdk/build/qtBase
 
@@ -30,6 +30,11 @@ else
     echo "$QT6_BUILD_DIR does not exists."
     mkdir "${QT6_BUILD_DIR}"
     cd  "${QT6_BUILD_DIR}"
+    cmake  \
+	    -DCMAKE_INSTALL_PREFIX=/usr/local \
+	    ${SRC_DIR}/${QT6_SRC_DIR}
+    make -j 4
+    sudo make install
 fi
 
 
