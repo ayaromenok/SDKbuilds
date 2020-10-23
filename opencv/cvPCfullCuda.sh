@@ -2,6 +2,7 @@
 echo ">>>> Setup OpenCV on PC with OpenCL\CUDA"
 # only basic setup from tegra used - POCL not necessary on PC
 ../hardware/sysTegraX1.sh
+
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
 cd ~/sdk
@@ -12,6 +13,9 @@ cd opencv
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 git clone https://github.com/opencv/opencv_extra.git
+
+#get vulkan SDK
+sudo apt install lunarg-vulkan-sdk lunarg-vktrace lunarg-vkconfig lunarg-vulkan-layers
 
 cd ../..
 mkdir build
@@ -32,6 +36,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_OPENGL=ON \
 	-D WITH_CUDA=ON \
 	-D WITH_CUDNN=ON \
+	-D WITH_VULKAN=ON \
 	-D CUDA_FAST_MATH=ON \
 	-D WITH_CABLAS=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
