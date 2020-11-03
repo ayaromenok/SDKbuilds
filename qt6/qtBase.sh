@@ -3,8 +3,8 @@ SRC_DIR=~/sdk/src/qt
 BUILD_DIR=~/sdk/build/qtBase
 
 echo "Install Qt ${QT6_VER}, src in ${SRC_PATH}, build in ${BUILD_PATH}"
-#sudo apt-get build-dep qt5-default qtdeclarative5-dev cmake -y
-#sudo apt-get install libxcb-xinerama0-dev libasound2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libvulkan-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev cmake libxkbcommon-dev libxkbcommon-x11-dev -y
+sudo apt-get build-dep qt5-default qtdeclarative5-dev -y
+sudo apt-get install build-essential cmake git libxcb-xinerama0-dev libasound2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libvulkan-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev cmake libxkbcommon-dev libxkbcommon-x11-dev -y
 
 
 echo ">>>> get Qt6 Base - ${QT6_VER}"
