@@ -1,4 +1,4 @@
-QT6_VER=`cat _version.txt`
+QT6_VER=`cat _version_dev.txt`
 SRC_DIR=~/sdk/src/qt
 BUILD_DIR=~/sdk/build/qtBase
 
@@ -9,7 +9,6 @@ sudo apt-get install build-essential cmake git libxcb-xinerama0-dev libasound2-d
 
 echo ">>>> get Qt6 Base - ${QT6_VER}"
 mkdir "${SRC_DIR}" -p
-mkdir "${BUILD_DIR}" -p
 cd ${SRC_DIR}
 
 QT6_SRC_DIR=qtbase-everywhere-src-${QT6_VER}
@@ -17,13 +16,12 @@ if test -d "$QT6_SRC_DIR"; then
     echo "$QT6_SRC_DIR already exists."
 else
     echo "$QT6_SRC_DIR does not exists."
-    wget http://download.qt.io/official_releases/qt/6.0/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
+    wget http://download.qt.io/development_releases/qt/6.0/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
     echo "Extracting Qt-${QT6_VER}"
     tar xf qtbase-everywhere-src-${QT6_VER}.tar.xz
     rm  qtbase-everywhere-src-${QT6_VER}.tar.xz
     echo "Done"
 fi
-
 
 QT6_BUILD_DIR=${BUILD_DIR}-${QT6_VER}
 if test -d "$QT6_BUILD_DIR"; then
