@@ -1,8 +1,8 @@
 #!/bin/sh
 echo ">>>> Setup OpenCV on TegraX1"
 
-#../hardware/sysTegraX1.sh
-#../hardware/sysTegraX1Pocl.sh
+../hardware/sysTegraX1.sh
+../hardware/sysTegraX1Pocl.sh
 
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
@@ -11,9 +11,9 @@ mkdir src
 cd src
 mkdir opencv
 cd opencv
-#git clone https://github.com/opencv/opencv.git
-#git clone https://github.com/opencv/opencv_contrib.git
-#git clone https://github.com/opencv/opencv_extra.git
+git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
+git clone https://github.com/opencv/opencv_extra.git
 
 cd ../..
 mkdir build
