@@ -32,6 +32,8 @@ else
     cd  "${QT6_BUILD_DIR}"
     cmake  \
 	    -DCMAKE_INSTALL_PREFIX=/usr/local \
+	    -DBUILD_qttranslation=OFF \
+	    -DBUILD_qtwayland=OFF \
 	    ${SRC_DIR}/${QT6_SRC_DIR}
 
 #    cmake --build . --parallel
