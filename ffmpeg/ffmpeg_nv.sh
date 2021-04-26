@@ -14,6 +14,6 @@ cd ~/sdk/build/ffmpeg
 
 ../../src/ffmpeg/ffmpeg/configure --enable-nonfree --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
 
-make -j 
+make -j 4
 
 sudo make install
