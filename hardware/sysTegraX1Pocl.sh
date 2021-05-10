@@ -1,4 +1,4 @@
-sudo apt install cmake clang-10 libclang-10-dev libhwloc-dev hwloc libclang-cpp10-dev -y
+sudo apt install clang-10 libclang-10-dev libhwloc-dev hwloc libclang-cpp10-dev -y
 sudo rm /usr/bin/llvm-config
 sudo ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
 mkdir ~/sdk
