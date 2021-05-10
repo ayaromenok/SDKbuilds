@@ -4,7 +4,7 @@ BUILD_DIR=~/sdk/build/qtBase
 
 echo "Install Qt ${QT6_VER}, src in ${SRC_PATH}, build in ${BUILD_PATH}"
 sudo apt-get build-dep qt5-default qtdeclarative5-dev -y
-sudo apt-get install build-essential cmake git libxcb-xinerama0-dev libasound2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libvulkan-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev cmake libxkbcommon-dev libxkbcommon-x11-dev -y
+sudo apt-get install build-essential git libxcb-xinerama0-dev libasound2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libvulkan-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev cmake libxkbcommon-dev libxkbcommon-x11-dev -y
 
 
 echo ">>>> get Qt6 Base - ${QT6_VER}"
@@ -17,7 +17,7 @@ if test -d "$QT6_SRC_DIR"; then
     echo "$QT6_SRC_DIR already exists."
 else
     echo "$QT6_SRC_DIR does not exists."
-    wget http://download.qt.io/official_releases/qt/6.0/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
+    wget http://download.qt.io/official_releases/qt/6.1/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
     echo "Extracting Qt-${QT6_VER}"
     tar xf qtbase-everywhere-src-${QT6_VER}.tar.xz
     rm  qtbase-everywhere-src-${QT6_VER}.tar.xz

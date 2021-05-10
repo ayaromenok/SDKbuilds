@@ -16,7 +16,7 @@ if test -d "$QT6_SRC_DIR"; then
     echo "$QT6_SRC_DIR already exists."
 else
     echo "$QT6_SRC_DIR does not exists."
-    wget http://download.qt.io/development_releases/qt/6.0/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
+    wget http://download.qt.io/development_releases/qt/6.1/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
     echo "Extracting Qt-${QT6_VER}"
     tar xf qtbase-everywhere-src-${QT6_VER}.tar.xz
     rm  qtbase-everywhere-src-${QT6_VER}.tar.xz
