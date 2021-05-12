@@ -1,5 +1,4 @@
 CMAKE_VER=`cat _cmake_version.txt`
-QT^_VER=`cat _version.txt`
 SRC_DIR=~/sdk/src/cmake
 BUILD_DIR=~/sdk/build/cmake
 
