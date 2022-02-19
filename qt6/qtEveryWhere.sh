@@ -16,7 +16,7 @@ if test -d "$QT6_SRC_DIR"; then
     echo "$QT6_SRC_DIR already exists."
 else
     echo "$QT6_SRC_DIR does not exists. Creating..."
-    wget http://download.qt.io/official_releases/qt/6.1/${QT6_VER}/single/qt-everywhere-src-${QT6_VER}.tar.xz
+    wget http://download.qt.io/official_releases/qt/6.2/${QT6_VER}/single/qt-everywhere-src-${QT6_VER}.tar.xz
     echo "Extracting Qt-${QT6_VER}"
     tar xf qt-everywhere-src-${QT6_VER}.tar.xz
     rm  qt-everywhere-src-${QT6_VER}.tar.xz
@@ -31,7 +31,7 @@ else
     mkdir "${QT6_BUILD_DIR}"
     cd  "${QT6_BUILD_DIR}"
     cmake  \
-	    -DCMAKE_INSTALL_PREFIX=/usr/local \
+	    -DCMAKE_INSTALL_PREFIX=/usr/local/qt6 \
 	    -DBUILD_qttranslation=OFF \
 	    -DBUILD_qtwayland=OFF \
 	    ${SRC_DIR}/${QT6_SRC_DIR}

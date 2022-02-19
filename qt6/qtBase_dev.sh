@@ -31,7 +31,7 @@ else
     mkdir "${QT6_BUILD_DIR}"
     cd  "${QT6_BUILD_DIR}"
     cmake  \
-	    -DCMAKE_INSTALL_PREFIX=/usr/local \
+	    -DCMAKE_INSTALL_PREFIX=/usr/local/qt6dev \
 	    ${SRC_DIR}/${QT6_SRC_DIR}
     make -j 4
     sudo make install
