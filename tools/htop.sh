@@ -1,4 +1,4 @@
-sudo apt install libncurses-dev libsensors4-dev
+sudo apt install libncurses-dev libsensors4-dev build-essential autoconf -y 
 cd ~
 mkdir sdk
 cd sdk
@@ -7,9 +7,10 @@ cd src
 mkdir tools
 cd tools
 git clone https://github.com/htop-dev/htop.git
+cd htop
 ./autogen.sh
 ./configure
-make
+make -j 4
 make install
 ln -s /usr/local/bin/htop /usr/bin/htop
 
