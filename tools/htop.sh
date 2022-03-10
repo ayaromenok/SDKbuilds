@@ -1,3 +1,4 @@
+sudo apt remove htop -y
 sudo apt install libncurses-dev libsensors4-dev build-essential autoconf -y 
 cd ~
 mkdir sdk
@@ -12,6 +13,7 @@ cd htop
 ./configure
 make -j 4
 make install
-ln -s /usr/local/bin/htop /usr/bin/htop
+sudo make install
+sudo ln -s /usr/local/bin/htop /usr/bin/htop
 
 
