@@ -12,7 +12,7 @@ ln -s ccache /usr/local/bin/c++
 
 #setup
 #ccache -F 0
-ccache -M 1024
+ccache -M 12
 ccache -s
 #Empty the cache and reset the stats:
 #ccache -C -z
