@@ -1,5 +1,5 @@
-
-sudo apt install gawk device-tree-compiler texinfo
+cd ~
+sudo apt install gawk device-tree-compiler texinfo flex bison
 mkdir sdk
 cd sdk
 mkdir riscv
@@ -16,9 +16,9 @@ make install
 cd ../..
 
 
-git clone https://github.com/riscv/riscv-gnu-toolchain.git --branch rvv-intrinsic --single-branch --depth 1
+git clone https://github.com/riscv-collab/riscv-gnu-toolchain.git --branch rvv-next --single-branch --depth 1
 cd riscv-gnu-toolchain/
-git submodule update --init --recursive --depth 1 riscv-binutils riscv-gcc                         riscv-glibc riscv-dejagnu riscv-newlib riscv-gdb
+git submodule update --init --recursive --depth 1 riscv-binutils riscv-gcc riscv-glibc riscv-dejagnu riscv-newlib riscv-gdb
 mkdir build
 cd build
 ../configure --prefix=/usr/local --enable-multilib
