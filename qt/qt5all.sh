@@ -8,8 +8,8 @@ cd src
 mkdir qt
 cd qt
 
-wget http://download.qt.io/official_releases/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
-tar xf qt-everywhere-src-5.15.2.tar.xz
+wget http://download.qt.io/official_releases/qt/5.15/5.15.4/single/qt-everywhere-src-5.15.4.tar.xz
+tar xf qt-everywhere-src-5.15.4.tar.xz
 
 cd ../..
 mkdir build
@@ -21,7 +21,7 @@ sudo apt install gperf llvm-dev libnss3-dev
 
 echo ">>>> Configure Qt5 base"
 PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/share/pkgconfig \
-../../src/qt/qt-everywhere-src-5.15.2/configure \
+../../src/qt/qt-everywhere-src-5.15.4/configure \
 -opengl desktop \
 -opensource -confirm-license -release \
 -force-pkg-config \

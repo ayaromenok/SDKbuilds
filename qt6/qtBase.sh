@@ -1,4 +1,5 @@
 QT6_VER=`cat _version.txt`
+QT6_VER_MAJOR=${QT6_VER::-2}
 SRC_DIR=~/sdk/src/qt
 BUILD_DIR=~/sdk/build/qtBase
 
@@ -17,7 +18,8 @@ if test -d "$QT6_SRC_DIR"; then
     echo "$QT6_SRC_DIR already exists."
 else
     echo "$QT6_SRC_DIR does not exists."
-    wget http://download.qt.io/official_releases/qt/6.2/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
+    mkdir -p ${QT6_SRC_DIR}
+    wget http://download.qt.io/official_releases/qt/${QT6_VER_MAJOR}/${QT6_VER}/submodules/qtbase-everywhere-src-${QT6_VER}.tar.xz
     echo "Extracting Qt-${QT6_VER}"
     tar xf qtbase-everywhere-src-${QT6_VER}.tar.xz
     rm  qtbase-everywhere-src-${QT6_VER}.tar.xz
@@ -30,13 +32,12 @@ if test -d "$QT6_BUILD_DIR"; then
     echo "$QT6_BUILD_DIR already exists. Remove it to rebuild from scratch."
 else
     echo "$QT6_BUILD_DIR does not exists."
-    mkdir "${QT6_BUILD_DIR}"
+    mkdir -p "${QT6_BUILD_DIR}"
     cd  "${QT6_BUILD_DIR}"
     cmake  \
-	    -DCMAKE_INSTALL_PREFIX=/usr/local/qt6 \
+	    -DCMAKE_INSTALL_PREFIX=/usr/local/qt${QT6_VER_MAJOR} \
 	    ${SRC_DIR}/${QT6_SRC_DIR}
     make -j 4
     sudo make install
 fi
-
 
