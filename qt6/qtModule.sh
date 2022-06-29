@@ -5,7 +5,7 @@ MODULE_CUR=""
 
 
 PS3="Select module: "
-select module in qttools qtshadertools qtdeclarative qt3d qt5compat qtserialport
+select module in qttools qtshadertools qtdeclarative qt5compat qt3d qtserialport
 do
     echo "Selected module: $module"
     MODULE_CUR=$module
@@ -22,12 +22,12 @@ do
 	    echo "qtdeclarative"
 	    break
 	    ;;
-	qt3d)
-	    echo "qt3d"
-	    break
-	    ;;
 	qt5compat)
 	    echo "qt5 compat"
+	    break
+	    ;;
+	qt3d)
+	    echo "qt3d"
 	    break
 	    ;;
 	qtserialport)
