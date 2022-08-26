@@ -9,7 +9,7 @@ sudo apt-get install build-essential git libxcb-xinerama0-dev libasound2-dev lib
 sudo apt-get install  libxcb-xinput-dev libxi-dev libx11-xcb-dev -y
 sudo apt install libmd4c-dev libdouble-conversion-dev -y
 sudo ln -s /usr/lib/x86_64-linux-gnu/libmd4c.so.0.4.8 /usr/lib/x86_64-linux-gnu/libmd4c-html.so.0.4.8
-sudo apt-get install libxkbcommon-x11-dev -y
+sudo apt-get install libxkbcommon-x11-dev cmake -y
 #sudo apt-get install cmake
 
 echo ">>>> get Qt6 Base - ${QT6_VER}"
