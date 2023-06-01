@@ -1,7 +1,7 @@
 mkdir build
 cd build
 cmake -DZSTD_FROM_INTERNET=ON -DHIREDIS_FROM_INTERNET=ON ..
-make -j 4
+make -j$(nproc)
 make install
 
 #cp ccache /usr/local/bin/

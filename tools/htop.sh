@@ -11,7 +11,7 @@ git clone https://github.com/htop-dev/htop.git
 cd htop
 ./autogen.sh
 ./configure
-make -j 4
+make -j$(nproc)
 make install
 sudo make install
 sudo ln -s /usr/local/bin/htop /usr/bin/htop
