@@ -1,6 +1,6 @@
 QT6_VER=`cat _version.txt`
 QT6_VER_MAJOR=${QT6_VER::-2}
-SRC_DIR=~/sdk/src/qt
+SRC_DIR=/mnt/home/sdk/src/qt
 MODULE_CUR=""
 
 
@@ -72,8 +72,8 @@ else
     cmake  \
 	    -DCMAKE_INSTALL_PREFIX=/usr/local/qt${QT6_VER_MAJOR} \
 	    ${SRC_DIR}/${QT6_SRC_DIR}
-    make -j 4
-    sudo make -j 4 install
+    make -j$(nproc)
+    sudo make -j$(nproc) install
 fi
 
 

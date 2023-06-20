@@ -34,7 +34,7 @@ else
     cmake  \
 	    -DCMAKE_INSTALL_PREFIX=/usr/local \
 	    ${SRC_DIR}/${CMAKE_SRC_DIR}
-    make -j 4
+    make -j$(nproc)
     sudo make install
 fi
 

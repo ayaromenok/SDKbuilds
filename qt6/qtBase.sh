@@ -1,7 +1,7 @@
 QT6_VER=`cat _version.txt`
 QT6_VER_MAJOR=${QT6_VER::-2}
-SRC_DIR=~/sdk/src/qt
-BUILD_DIR=~/sdk/build/qt${QT6_VER_MAJOR}/base
+SRC_DIR=/mnt/home/sdk/src/qt
+BUILD_DIR=/mnt/home/sdk/build/qt${QT6_VER_MAJOR}/base
 
 echo "Install Qt ${QT6_VER}, src in ${SRC_PATH}, build in ${BUILD_PATH}"
 sudo apt-get build-dep qt5-default qtdeclarative5-dev -y
@@ -41,7 +41,7 @@ else
     cmake  \
             -DCMAKE_INSTALL_PREFIX=/usr/local/qt${QT6_VER_MAJOR} \
             ${SRC_DIR}/${QT6_SRC_DIR}
-    make -j 4
+    make -j$(nproc)
     sudo make install
 fi
 

@@ -41,7 +41,7 @@ else
     cmake  \
             -DCMAKE_INSTALL_PREFIX=/usr/local/qt${QT6_VER_MAJOR}_dev \
             ${SRC_DIR}/${QT6_SRC_DIR}
-    make -j 4
+    make -j$(nproc)
     sudo make install
 fi
 

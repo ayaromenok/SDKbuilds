@@ -38,7 +38,7 @@ else
 
 #    cmake --build . --parallel
 #    sudo cmake --install .
-    make -j 4
+    make -j$(nproc)
     sudo make install
 fi
 
