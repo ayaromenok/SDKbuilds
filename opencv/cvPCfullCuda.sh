@@ -4,7 +4,8 @@ echo ">>>> Setup OpenCV on PC with OpenCL\CUDA"
 #../hardware/sysTegraX1.sh
 #get vulkan SDK
 sudo apt install lunarg-vktrace lunarg-vkconfig lunarg-vulkan-layers libgtk2.0-dev libgtk-3-dev pkg-config -y
-
+#ffmpeg
+sudo apt install libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavresample-dev libavutil-dev -y
 echo ">>>> Get OpenCV"
 mkdir ~/sdk
 cd ~/sdk
