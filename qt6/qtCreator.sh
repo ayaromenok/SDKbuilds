@@ -5,7 +5,7 @@ QT6_VER_MAJOR=${QT6_VER::-2}
 
 SRC_DIR=~/sdk/src/qt
 BUILD_DIR=~/sdk/build/qtcreator${QTC_VER_MAJOR}
-
+sudo apt install ninja-build -y
 #echo "Install QtCreator ${QTC_VER}, src in ${SRC_PATH}, build in ${BUILD_PATH}"
 #sudo apt-get build-dep qt5-default qtdeclarative5-dev -y
 #sudo apt-get install build-essential git libxcb-xinerama0-dev libasound2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libvulkan-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev -y
@@ -35,6 +35,7 @@ fi
 
 
 QTC_BUILD_DIR=${BUILD_DIR}
+
 if test -d "$QTC_BUILD_DIR"; then
     echo "$QTC_BUILD_DIR already exists. Remove it to rebuild from scratch."
 else
