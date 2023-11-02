@@ -1,7 +1,7 @@
 QT6_VER=`cat _version.txt`
 QT6_VER_MAJOR=${QT6_VER::-2}
-SRC_DIR=/mnt/home/sdk/src/qt
-BUILD_DIR=/mnt/home/sdk/build/qt${QT6_VER_MAJOR}/base
+SRC_DIR=~/sdk/src/qt
+BUILD_DIR=~/sdk/build/qt${QT6_VER_MAJOR}/base
 
 echo "Install Qt ${QT6_VER}, src in ${SRC_PATH}, build in ${BUILD_PATH}"
 sudo apt-get build-dep qt5-default qtdeclarative5-dev -y
@@ -49,4 +49,3 @@ echo "/usr/local/qt${QT6_VER_MAJOR}/lib" | sudo tee /etc/ld.so.conf.d/qt${QT6_VE
 sudo ldconfig
 
 
-#cmake -DCMAKE_INSTALL_PREFIX=/usr/local/qt63 ~/sdk/src/qt/qtbase-everywhere-src-6.3.1/ -GNinja -DFEATURE_system_xcb_xinput=O

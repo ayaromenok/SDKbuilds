@@ -1,11 +1,11 @@
 QT6_VER=`cat _version.txt`
 QT6_VER_MAJOR=${QT6_VER::-2}
-SRC_DIR=/mnt/home/sdk/src/qt
+SRC_DIR=~/home/sdk/src/qt
 MODULE_CUR=""
 
 
 PS3="Select module: "
-select module in qttools qtshadertools qtdeclarative qt5compat qt3d qtserialport
+select module in qttools qtshadertools qtdeclarative qt5compat qt3d qtserialport qtimageformats qtmultimedia qtnetworkauth qtremoteobjects
 do
     echo "Selected module: $module"
     MODULE_CUR=$module
@@ -32,6 +32,24 @@ do
 	    ;;
 	qtserialport)
 	    echo "qt serial port"
+	    break
+	    ;;
+	qtimageformats)
+	    echo "qt image formats"
+	    break
+	    ;;
+	qtmultimedia)
+	    echo "qt multimedia"
+	    echo "\todo - FFmpeg, ALSA builds"
+	    sudo apt install libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libffmpeg-nvenc-dev -y
+	    break
+	    ;;
+	qtnetworkauth)
+	    echo "qt network auth"
+	    break
+	    ;;
+	qtremoteobjects)
+	    echo "qt remote objects"
 	    break
 	    ;;
 	*)
